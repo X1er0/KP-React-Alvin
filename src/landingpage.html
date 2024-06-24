@@ -20,6 +20,9 @@
         }
         main {
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         footer {
             background-color: #333;
@@ -30,44 +33,50 @@
             width: 100%;
             bottom: 0;
         }
-        img {
+        .profile-img {
             display: block;
             margin: 0 auto;
             border-radius: 50%;
         }
-        table {
+        .profile-table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
-        table, th, td {
+        .profile-table, .profile-table th, .profile-table td {
             border: 1px solid #ddd;
         }
-        th, td {
+        .profile-table th, .profile-table td {
             padding: 8px;
             text-align: left;
         }
-        form {
+        .contact-form {
             max-width: 600px;
+            width: 100%;
             margin: 0 auto;
             padding: 8px;
             background: #fff;
             border: 1px solid #ddd;
             border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
-        form input, form textarea {
+        .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            transition: border-color 0.3s ease;
         }
-        form input[type="submit"] {
+        .contact-form input[type="submit"] {
             background-color: #333;
             color: #fff;
             border: none;
             cursor: pointer;
-            position: fixed;
+        }
+        .contact-form input:hover, .contact-form textarea:hover {
+            border-color: #333;
         }
     </style>
 </head>
@@ -79,31 +88,31 @@
 
 <main>
     <h2>Profil</h2>
-    <img src="img\A.jpg" alt="Foto Diri" width="500" height="500">
-    <p>Halo! Nama saya [Alvin]. Saya adalah seorang [BackEnd Developer]. Saya sangat tertarik dalam [Hobi dan Minat saya yaitu dalam dunia Software Engineering].</p>
+    <img src="img/A.jpg" alt="Foto Diri" width="500" height="500" class="profile-img">
+    <p>Halo! Nama saya <span class="highlight">Alvin</span>. Saya adalah seorang <span class="highlight">BackEnd Developer</span>. Saya sangat tertarik dalam <span class="highlight">dunia Software Engineering</span>.</p>
     
     <h2>Data Diri</h2>
-    <table>
+    <table class="profile-table">
         <tr>
             <th>Nama</th>
-            <td>[Alvin]</td>
+            <td>Alvin</td>
         </tr>
         <tr>
             <th>Profesi</th>
-            <td>[BackEnd Dev]</td>
+            <td>BackEnd Dev</td>
         </tr>
         <tr>
             <th>Alamat</th>
-            <td>[Jakarta]</td>
+            <td>Jakarta</td>
         </tr>
         <tr>
             <th>Email</th>
-            <td><a href="alvin21octa@gmail.com">email@example.com</a></td>
+            <td><a href="mailto:alvin21octa@gmail.com">alvin21octa@gmail.com</a></td>
         </tr>
     </table>
 
     <h2>Hubungi Saya</h2>
-    <form action="example@example.com" method="post" enctype="text/plain">
+    <form action="mailto:example@example.com" method="post" enctype="text/plain" class="contact-form">
         <label for="name">Nama:</label>
         <input type="text" id="name" name="name" required>
 
@@ -120,7 +129,9 @@
     </form>
 </main>
 
-
+<footer>
+    <p>&copy; 2024 <span class="highlight">XieroWeb</span>. Semua Hak Dilindungi.</p>
+</footer>
 
 </body>
 </html>
