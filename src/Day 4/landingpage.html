@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar React</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+        }
+        .contact-form input, .contact-form textarea {
+            transition: border-color 0.3s ease;
+        }
+        .contact-form input:hover, .contact-form textarea:hover {
+            border-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Belajar React</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Profil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Data Diri</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Hubungi Saya</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Selamat Datang di Halaman Tentang Saya</h1>
+    <p class="lead">Ini adalah halaman pribadi saya yang dibuat dengan Bootstrap</p>
+</div>
+
+<main class="container">
+    <h2>Profil</h2>
+    <img src="img/A.jpg" alt="Foto Diri" width="500" height="500" class="profile-img img-fluid">
+    <p class="mt-3">Halo! Nama saya <span class="highlight">Alvin</span>. Saya adalah seorang <span class="highlight">BackEnd Developer</span>. Saya sangat tertarik dalam <span class="highlight">dunia Software Engineering</span>.</p>
+    
+    <h2>Data Diri</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Nama</th>
+            <td>Alvin</td>
+        </tr>
+        <tr>
+            <th>Profesi</th>
+            <td>BackEnd Dev</td>
+        </tr>
+        <tr>
+            <th>Alamat</th>
+            <td>Jakarta</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><a href="mailto:alvin21octa@gmail.com">alvin21octa@gmail.com</a></td>
+        </tr>
+    </table>
+
+    <h2>Hubungi Saya</h2>
+    <form action="mailto:example@example.com" method="post" enctype="text/plain" class="contact-form">
+        <div class="form-group">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">No Telepon:</label>
+            <input type="tel" id="phone" name="phone" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+        </div>
+       
+        <button type="submit" class="btn btn-dark">Kirim</button>
+    </form>
+</main>
+
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 <span class="highlight">XieroWeb</span>. Semua Hak Dilindungi.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
